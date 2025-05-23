@@ -1,6 +1,8 @@
-// 5. Write a javascript program to rotate the string 'Hello' in the right direction. This is done by periodically removing one letter from the string end and attaching it the front.
-let str = 'Hello';
-setInterval(() => {
-    str = str[str.length - 1] + str.slice(0, str.length - 1);
-    console.log(str);
-}, 1000);
+// 6. Write a Javascript program to determine whether a given year is leap year in the Gregorian Calendar
+function leapYear(year) {
+    return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+}
+
+console.log(leapYear(2016));
+console.log(leapYear(2000));
+console.log(leapYear(2001));
