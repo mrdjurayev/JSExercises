@@ -1,7 +1,10 @@
-// 16. Write a Javascript program to compute the sum of the given integers. If the two values are the same, then return triple their sum.
-function sum(a, b) {
-    if(a === b) return (a + b) * 3;
-    return a + b;
+// 20. Write a Javascript program to check two given integers whether one is positive and another one is negative
+function positiveNegative(a, b) {
+    return (a > 0 && b < 0) || (a < 0 && b > 0);
 }
 
-console.log(sum(12, 12));
+console.log(positiveNegative(5, -3));  // true
+console.log(positiveNegative(-7, 9));  // true
+console.log(positiveNegative(0, -1));  // false
+console.log(positiveNegative(4, 6));   // false
+console.log(positiveNegative(-2, -8)); // false
