@@ -1,10 +1,7 @@
-// 15. Write a Javascript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference
-function difference13(n) {
-    if(n <= 13) {
-        return 13 - n;
-    } else {
-        return 2 * (n - 13);
-    }
+// 16. Write a Javascript program to compute the sum of the given integers. If the two values are the same, then return triple their sum.
+function sum(a, b) {
+    if(a === b) return (a + b) * 3;
+    return a + b;
 }
 
-console.log(difference13(12));
+console.log(sum(12, 12));
