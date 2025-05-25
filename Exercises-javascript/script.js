@@ -1,29 +1,14 @@
-// 10. Write a Javascript program to calculate multiplication and division of two numbers (input from the user)
-function calculator() {
-    const result = document.getElementById('result');
-
-    function getNumbers() {
-        const number1 = parseFloat(document.getElementById('number1').value);
-        const number2 = parseFloat(document.getElementById('number2').value);
-        return {number1, number2};
-    }
-
-    document.getElementById('division').addEventListener('click', () => {
-        const {number1, number2} = getNumbers();
-        if(number2 === 0) {
-            result.textContent = `Division by zero is not allowed!`;
-        } else {
-            result.textContent = `The result is: ${number1 / number2}`;
-        }        
-    });
-
-    document.getElementById('multiplication').addEventListener('click', ()  => {
-        const {number1, number2} = getNumbers();
-        result.textContent = `The result is: ${number1 * number2}`;
-    });
-    
-
+function calculateCelsius() {
+    const input = parseFloat(document.getElementById('celsius').value);
+    const f = document.getElementById('result-celsius');
+    f.textContent = input * 9 / 5 + 32;
 }
 
-calculator();
+function calculateFarenheit() {
+    const input = parseFloat(document.getElementById('farenheit').value);
+    const c = document.getElementById('result-farenheit');
+    c.textContent = (input - 32) / 9 * 5;
+}
 
+document.getElementById('convert-celsius').addEventListener('click', calculateCelsius);
+document.getElementById('convert-farenheit').addEventListener('click', calculateFarenheit);
