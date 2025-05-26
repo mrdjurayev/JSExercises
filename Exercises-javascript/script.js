@@ -1,11 +1,8 @@
-// 23. Write a Javascript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.
-const swapChar = str => {
-    if(str.length <= 1) return str;
-
-    const firstChar = str[0];
-    const lastChar = str[str.length - 1];
-    const middleChar = str.substring(1, str.length - 1);
-    return lastChar + middleChar + firstChar;
+// 24. Write a Javascript program to create another string from a given string with the first character of the given string added to the front and back
+const FrontBackCharacter = function(str) {
+    if(str.length === 0) return "";
+    const firstCharacter = str[0];
+    return firstCharacter + str + firstCharacter;
 }
 
-console.log(swapChar('hello'));
+console.log(FrontBackCharacter(''));
