@@ -1,6 +1,8 @@
-// 27. Write a Javascript program to check whether a string starts with 'Java' if it does not otherwise
-function checkJava(str) {
-    return str.startsWith('Java');
+// 28. Write a Javascript program to check whether to given integer values are in the range 50..99(inclusive).
+// Return true if either of them falls within the range
+
+function inRange(number1, number2) {
+    return number1 >= 50 && number1 <= 99 || number2 >= 50 && number2 <= 99;
 }
 
-console.log(checkJava('Javascript'));
+console.log(inRange(60, 0));
