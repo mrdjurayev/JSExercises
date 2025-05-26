@@ -1,8 +1,11 @@
-// 22. Write a Javascript program to  remove a character at the specified position in a given string and return the modified string
-const removeCharacter = (str, position) => {
-    const part1 = str.substring(0, position); // [ 0 - position ) it  takes and creates a new string
-    const part2 = str.substring(position + 1, str.length); // [ position + 1 - to the end ] it takes the rest, excluding the position
-    return part1 + part2;
+// 23. Write a Javascript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.
+const swapChar = str => {
+    if(str.length <= 1) return str;
+
+    const firstChar = str[0];
+    const lastChar = str[str.length - 1];
+    const middleChar = str.substring(1, str.length - 1);
+    return lastChar + middleChar + firstChar;
 }
 
-console.log(removeCharacter('Javascript', 5));
+console.log(swapChar('hello'));
