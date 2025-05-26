@@ -1,8 +1,10 @@
-// 28. Write a Javascript program to check whether to given integer values are in the range 50..99(inclusive).
-// Return true if either of them falls within the range
+// 30. Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in
+//  a given string. If "Script" appears in the string, return the string without 
+// "Script" otherwise return the original one.  
 
-function inRange(number1, number2) {
-    return number1 >= 50 && number1 <= 99 || number2 >= 50 && number2 <= 99;
+function checkScript(str) {
+    const startScript = str.substring(4, 10);
+    return startScript === 'Script' ? str.substring(0, 4) : str; 
 }
 
-console.log(inRange(60, 0));
+console.log(checkScript('wellScript'));
