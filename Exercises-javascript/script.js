@@ -1,7 +1,6 @@
-// 35. Write a  program to check  whether a specified character exists between the 2nd and 4th positions in a given string.
-function checkCharacter(str, char) {
-    const strBetween = str.substring(1, 4);
-    return strBetween.includes(char);
+// 36. Write a Javascript program that checks whether the last digit of three positive integers in the same.
+function sameThreeNumbers(a, b, c) {
+    return a % 10 === b % 10 && b % 10 === c % 10;
 }
 
-console.log(checkCharacter('hel', 'l'));
+console.log(sameThreeNumbers(12, 1, 3412));
