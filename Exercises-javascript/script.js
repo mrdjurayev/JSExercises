@@ -1,11 +1,6 @@
-// 32. Write a Javascrip program to find closest value to 100 from two numerical values
-function findClosest(num1, num2) {
-    const diff1 = Math.abs(100 - num1);
-    const diff2 = Math.abs(100 - num2);
-
-    if(diff1 < diff2) return num1;
-    else if(diff1 > diff2) return num2;
-    else return {num1, num2};
+// 33. Write a Javascript program to check whether two numbers are in the range 40..60 or 70..100 inclusive
+function checkRange(num1, num2) {
+    return (num1 >= 40 && num1 <= 60 || num1 >= 70 && num1 <= 100) && (num2 >= 40 && num2 <= 60 || num2 >= 70 && num2 <= 100)
 }
 
-console.log(findClosest(110, 110));
+console.log(checkRange(12, 23));
