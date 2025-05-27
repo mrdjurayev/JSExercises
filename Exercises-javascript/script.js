@@ -1,8 +1,11 @@
-// 32. Write a Javascript program to find the largest of three given integers
-function findLargestIntegers(a, b, c) {
-    if(a >= b && a >= c) return a;
-    else if(b >= a && b >= c) return b;
-    else return c;
+// 32. Write a Javascrip program to find closest value to 100 from two numerical values
+function findClosest(num1, num2) {
+    const diff1 = Math.abs(100 - num1);
+    const diff2 = Math.abs(100 - num2);
+
+    if(diff1 < diff2) return num1;
+    else if(diff1 > diff2) return num2;
+    else return {num1, num2};
 }
 
-console.log(findLargestIntegers(10, 15, 15));
+console.log(findClosest(110, 110));
