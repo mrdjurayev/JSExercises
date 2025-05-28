@@ -1,8 +1,10 @@
-// 39. Write a Javascript program to compute the sum of the two given integers. If the sum in the range 50..80 return 65 otherwise return 80.
+// 40. Write a Javascript program to check from two given integers whether one of them is 8 or  their sum or difference is 8
 
-function conditionalSum(a, b) {
+function conditionSum(a, b) {
     const sum = a + b;
-    return sum >= 50 && sum <= 80 ? 65 : 80;
+    const diff = Math.abs(a - b);
+
+    return sum === 8 || diff === 8 || a === 8 || b === 8 ? `equal` : `not equal`;
 }
 
-console.log(conditionalSum(12, 43));
+console.log(conditionSum(3, 8));
