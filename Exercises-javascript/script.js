@@ -1,15 +1,8 @@
-// 38Write a JavaScript program to evaluate a student's total marks across various examinations and determine their grade. The grading criteria are as follows:
+// 39. Write a Javascript program to compute the sum of the two given integers. If the sum in the range 50..80 return 65 otherwise return 80.
 
-// If the total marks fall within the range of 89 to 100 (inclusive), the student receives an A+ grade.
-// If the examination is labeled as "Final-exam," the student will receive an A+ grade only if their total marks are 90 or greater. Assume that final examination means we pass 'true' as second parameter otherwise blank.
-// If the student achieves an A+ grade, the program should return 'true'; otherwise, it should return 'false'.
-
-function evaluateExam(score, exam) {
-    if(score > 100) return `unusual score!`;
-    else if(exam === 'Final') return score >= 90;
-    else if(score >= 89) return true;
-    else return false;
+function conditionalSum(a, b) {
+    const sum = a + b;
+    return sum >= 50 && sum <= 80 ? 65 : 80;
 }
 
-console.log(evaluateExam(90, 'Final'));
-
+console.log(conditionalSum(12, 43));
