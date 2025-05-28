@@ -1,10 +1,9 @@
-// 40. Write a Javascript program to check from two given integers whether one of them is 8 or  their sum or difference is 8
+// 41. Write a Javascript program to check a set of three numbers; if the three numbers are the same return 30; otherwise return 20; and if two numbers are the same return 40
 
-function conditionSum(a, b) {
-    const sum = a + b;
-    const diff = Math.abs(a - b);
-
-    return sum === 8 || diff === 8 || a === 8 || b === 8 ? `equal` : `not equal`;
+function conditionNumbers(a, b, c) {
+    if(a === b && b === c) return 30;
+    if(a === b || a === c || b === c) return 40;
+    else return 20;
 }
 
-console.log(conditionSum(3, 8));
+console.log(conditionNumbers(12, 12, 345));
