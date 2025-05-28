@@ -1,10 +1,9 @@
-// 42. Write a Javascript program to check whether three given numbers are increasing in strict or in soft mode. 
-// strict mode --> 10, 14, 23; soft mode --> 24, 22, 31 (c >= b);
+// 43. Write a Javascript proram to check from three given numbers (non negative  integers) that two or all of them have the same rightmost digit
 
-function checkOrder(a, b, c) {
-    if(a < b && b < c) return `Strict mode`;
-    else if(c >= b) return `Soft mode`;
-    else return `the numbers are not sorted`;
+function numbersCheck(a, b, c) {
+    if(a % 10 === b % 10 && b % 10 === c % 10) return true;
+    else if(a % 10 === b % 10 || b % 10 === c % 10 || a % 10 === c % 10) return true;
+    else return  false;
 }
 
-console.log(checkOrder(12, 4, 3));
+console.log(numbersCheck(12, 22, 45));
