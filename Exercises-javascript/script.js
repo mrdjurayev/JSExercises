@@ -1,9 +1,10 @@
-// 41. Write a Javascript program to check a set of three numbers; if the three numbers are the same return 30; otherwise return 20; and if two numbers are the same return 40
+// 42. Write a Javascript program to check whether three given numbers are increasing in strict or in soft mode. 
+// strict mode --> 10, 14, 23; soft mode --> 24, 22, 31 (c >= b);
 
-function conditionNumbers(a, b, c) {
-    if(a === b && b === c) return 30;
-    if(a === b || a === c || b === c) return 40;
-    else return 20;
+function checkOrder(a, b, c) {
+    if(a < b && b < c) return `Strict mode`;
+    else if(c >= b) return `Soft mode`;
+    else return `the numbers are not sorted`;
 }
 
-console.log(conditionNumbers(12, 12, 345));
+console.log(checkOrder(12, 4, 3));
