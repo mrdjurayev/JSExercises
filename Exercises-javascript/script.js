@@ -1,8 +1,8 @@
-// 50. Write a Javascript program to capitalize the first letter of each word in a given string
+// 52. Write a Javascript program to convert letters of a given string alphabetically
 
-function capitalizeWords(text) {
-    const words = text.split(' ');
-    return words.map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+function sortLetters(str) {
+    const letters = str.split('');
+    return letters.sort().join('');
 }
 
-console.log(capitalizeWords('hello world!'));
+console.log(sortLetters('hello'));
