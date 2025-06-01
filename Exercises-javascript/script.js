@@ -1,15 +1,11 @@
-// 54. Write a Javascript program to count the number of vowels in a given string
+// 55. Write a Javascript program to check whether  a given string contains an equal number of p's and t's
 
-function countVowels(str) {
-    // let vowelLetters = [];
-    const vowels = ['a', 'e', 'i', 'o', 'u'];
+const countLetters = str => {
     const letters = str.toLowerCase().split('');
-    const vowelLetters = letters.filter(letter => {
-        return vowels.includes(letter);
-    });
-
-    return vowelLetters.length;
+    const countP = letters.filter(letter => letter === 'p').length;
+    const countT = letters.filter(letter => letter === 't').length;
+    const isEqual = countP === countT;
+    return {countP, countT, isEqual};
 }
 
-console.log(countVowels('hello javascript'));
-
+console.log(countLetters('hello Master'));
