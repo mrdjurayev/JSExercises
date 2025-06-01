@@ -1,11 +1,14 @@
-// 58. Write a Javascript program to create an updated of 4 copies of the last 3 characters of a given string original string. The string length must  be 3 and above.
+// 59. Write a Javascript program to extract the first half of a even string
 
-function copyCharacter(str) {
-    if(str.length < 3) return `The string length must be 3 or above!`;
-    
-    const lastThree = str.slice(-3);
+function extractStringHalf(str) {
+    if(str.length % 2 !== 0) {
+        return `String's length isn't even!`;
+    }
 
-    return lastThree.repeat(4);
+    const stringHalf = str.slice(0, str.length / 2);
+
+    return stringHalf;
 }
 
-console.log(copyCharacter('hello'));
+console.log(extractStringHalf('java'));
+
