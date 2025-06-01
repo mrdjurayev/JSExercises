@@ -1,9 +1,10 @@
-// 60. Write a Javascript program to create a new string without the first and last characters of a given string
+// 61. Write a Javascript program to concatinate two strings except for their first character
 
-function newString(str) {
-    const newStr = str.slice(1, str.length - 1);
-    return newStr;
+function concatinateString(str1, str2) {
+    const newStr1 = str1.slice(1);
+    const newStr2 = str2.slice(1);
+
+    return newStr1 + newStr2;
 }
 
-console.log(newString('Javascript'));
-
+console.log(concatinateString('hello', 'javascript'));
