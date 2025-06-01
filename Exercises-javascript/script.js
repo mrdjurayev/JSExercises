@@ -1,13 +1,9 @@
-// 56. Write a Javascript program to divide two positive numbers and return the result as string with properly formatted
+// 57. Write a Javascript program to create of specified copies (positive numbers) of a given string
 
-function divideAndFormat(a, b) {
-    if(a <= 0 || b <= 0) {
-        return `Please enter positive numbers!`;
+function stringCopy(str, num) {
+    if (typeof str !== 'string' || typeof num !== 'number' || num < 1) {
+        return '';
     }
-
-    const result = a / b;
-    return result.toLocaleString('en-US');
+    return str.repeat(num);
 }
-
-console.log(divideAndFormat(1232, 900));
-
+console.log(stringCopy('awda', 3));
