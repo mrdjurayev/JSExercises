@@ -1,10 +1,13 @@
-// 61. Write a Javascript program to concatinate two strings except for their first character
+// 62. Write a javascript program to move the last three characters to start of a given string. The  string length must be greater than or equal to three
 
-function concatinateString(str1, str2) {
-    const newStr1 = str1.slice(1);
-    const newStr2 = str2.slice(1);
+function moveCharacter(str) {
+    if(str.length < 3) {
+        return `String length must be greater than or equal to 3`;
+    }
 
-    return newStr1 + newStr2;
+    const lastThreeCharacters = str.slice(-3);
+    const restStr = str.slice(0, str.length - 3);
+    return lastThreeCharacters + restStr;
 }
 
-console.log(concatinateString('hello', 'javascript'));
+console.log(moveCharacter('javascript'));
