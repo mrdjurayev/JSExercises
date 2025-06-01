@@ -1,14 +1,9 @@
-// 59. Write a Javascript program to extract the first half of a even string
+// 60. Write a Javascript program to create a new string without the first and last characters of a given string
 
-function extractStringHalf(str) {
-    if(str.length % 2 !== 0) {
-        return `String's length isn't even!`;
-    }
-
-    const stringHalf = str.slice(0, str.length / 2);
-
-    return stringHalf;
+function newString(str) {
+    const newStr = str.slice(1, str.length - 1);
+    return newStr;
 }
 
-console.log(extractStringHalf('java'));
+console.log(newString('Javascript'));
 
