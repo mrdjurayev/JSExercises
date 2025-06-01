@@ -1,9 +1,11 @@
-// 57. Write a Javascript program to create of specified copies (positive numbers) of a given string
+// 58. Write a Javascript program to create an updated of 4 copies of the last 3 characters of a given string original string. The string length must  be 3 and above.
 
-function stringCopy(str, num) {
-    if (typeof str !== 'string' || typeof num !== 'number' || num < 1) {
-        return '';
-    }
-    return str.repeat(num);
+function copyCharacter(str) {
+    if(str.length < 3) return `The string length must be 3 or above!`;
+    
+    const lastThree = str.slice(-3);
+
+    return lastThree.repeat(4);
 }
-console.log(stringCopy('awda', 3));
+
+console.log(copyCharacter('hello'));
