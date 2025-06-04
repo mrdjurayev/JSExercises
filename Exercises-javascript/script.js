@@ -1,13 +1,12 @@
-// 62. Write a javascript program to move the last three characters to start of a given string. The  string length must be greater than or equal to three
+// 63. Write a Javascript program to create a string using the middle three chracters of a given string of odd length. The string length must be greater then or equal to three.
 
-function moveCharacter(str) {
-    if(str.length < 3) {
-        return `String length must be greater than or equal to 3`;
+function getMiddleThree(str) {
+    if(str.length % 2 == 0 || str.length < 3) {
+        return `The string lenght must be greater than or equal to three!`;
     }
 
-    const lastThreeCharacters = str.slice(-3);
-    const restStr = str.slice(0, str.length - 3);
-    return lastThreeCharacters + restStr;
+    return str.slice((str.length - 3) / 2, (str.length - 3) / 2 + 3);
 }
 
-console.log(moveCharacter('javascript'));
+console.log(getMiddleThree('getting'));
+
