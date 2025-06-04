@@ -1,8 +1,12 @@
-// 64. Write a Javascript program to concatenete two strings and return the result. If the length of the strings does not match, then remove the characters from the longer string
+// 65. Write a Javascript program to test whether a string ends with "Script". The string length must be greater than or equal to 6.
 
-function concatenateString(str1, str2) {
-    const minLength = Math.min(str1.length, str2.length);
-    return str1.slice(0, minLength) + str2.slice(0, minLength);
+function endWithScript(str) {
+    if(str.length >= 6) {
+        return str.endsWith('Script');
+    }
+
+    return `The string must be greater than or equal to 6!`;
 }
 
-console.log(concatenateString('hello', 'world'));
+console.log(endWithScript('Script'));
+
