@@ -1,12 +1,8 @@
-// 63. Write a Javascript program to create a string using the middle three chracters of a given string of odd length. The string length must be greater then or equal to three.
+// 64. Write a Javascript program to concatenete two strings and return the result. If the length of the strings does not match, then remove the characters from the longer string
 
-function getMiddleThree(str) {
-    if(str.length % 2 == 0 || str.length < 3) {
-        return `The string lenght must be greater than or equal to three!`;
-    }
-
-    return str.slice((str.length - 3) / 2, (str.length - 3) / 2 + 3);
+function concatenateString(str1, str2) {
+    const minLength = Math.min(str1.length, str2.length);
+    return str1.slice(0, minLength) + str2.slice(0, minLength);
 }
 
-console.log(getMiddleThree('getting'));
-
+console.log(concatenateString('hello', 'world'));
