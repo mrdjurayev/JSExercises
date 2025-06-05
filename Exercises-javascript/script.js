@@ -1,18 +1,14 @@
-// 67. Write a Javascript program to create a new  string from a given string. This program removes the first and last characters of the string if the first and last character is 'P'. Return the original string if the condition is not satisfied.
+// 68. Write a Javascript program to create a new string using the first and last n characters from a given string. The string length  must be larger than or equal to n
 
-function removeCharacter(str) {
-    const firstChar = str.startsWith('P');
-    const lastChar = str.endsWith('P');
-
-    if(firstChar && lastChar) {
-        return str.slice(1, -1);
-    } else if(firstChar) {
-        return str.slice(1);
-    } else if(lastChar) {
-        return str.slice(0, -1);
+function createString(str, n) {
+    if(str.length < n) {
+        return `The string length must be longer than or equal to n!`;
     }
 
-    return str;
+    const firstCharacters = str.slice(0, n);
+    const lastCharacters = str.slice(-n);
+
+    return firstCharacters + lastCharacters;
 }
 
-console.log(removeCharacter('Python'));
+console.log(createString('hello', 2));
