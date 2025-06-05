@@ -1,11 +1,7 @@
-// 71. Write a Javascript  program to check whether 1 appears in the first or last position of a given array of integers. The  array length must be larger than or equal to 1.
+// 72. Write a Javascript program to check  whether the first and last elements are  the same in a given array of integers of length 3.
 
-function checkCharacter(arr) {
-    if(arr.length < 1) {
-        return `array's length must be longer than or equal to 1!`;
-    }
-
-    return arr[0] === 1 || arr[arr.length - 1] === 1;
+function checkFirstLastElement(arr) {
+    return arr[0] === arr[arr.length - 1];
 }
 
-console.log(checkCharacter([10, 2, 3, 1]));
+console.log(checkFirstLastElement([3, 2, 3]));
