@@ -1,14 +1,8 @@
-// 68. Write a Javascript program to create a new string using the first and last n characters from a given string. The string length  must be larger than or equal to n
+// 69. Write a Javascript program to compute the sum of the three elements  of the given array of integers of length 3
 
-function createString(str, n) {
-    if(str.length < n) {
-        return `The string length must be longer than or equal to n!`;
-    }
-
-    const firstCharacters = str.slice(0, n);
-    const lastCharacters = str.slice(-n);
-
-    return firstCharacters + lastCharacters;
+function sumElementsArray(arr) {
+    const sum = arr.reduce((sum, acc) => sum + acc, 0);
+    return sum;
 }
 
-console.log(createString('hello', 2));
+console.log(sumElementsArray([1, 2, 3]));
