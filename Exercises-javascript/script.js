@@ -1,12 +1,8 @@
-// 65. Write a Javascript program to test whether a string ends with "Script". The string length must be greater than or equal to 6.
+// 66. Write a Javascript program to display the city name if the strings begins with "Los" or "New" otherwise return blank
 
-function endWithScript(str) {
-    if(str.length >= 6) {
-        return str.endsWith('Script');
-    }
-
-    return `The string must be greater than or equal to 6!`;
+function displayCity(cityName) {
+    if(cityName.startsWith('Los') || cityName.startsWith('New')) return cityName;
+    return '';
 }
 
-console.log(endWithScript('Script'));
-
+console.log(displayCity('New-York'));
