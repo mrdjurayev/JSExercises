@@ -1,7 +1,11 @@
-// 73. Write a Javascript program to reverse the elements of a given array of integers of length 3.
+// 74. Write a Javascript program to find the largerst value between the first and last elements and set all the  other elements to that value. Display the updated.
 
-function reverseElement(arr) {
-    return [...arr].reverse();
+function updateElements(arr) {
+    const largest = Math.max(...arr.slice(1, arr.length - 1));
+    const updatedArr = arr.map((elem, index) => {
+        return index === 0 || index === arr.length - 1 ? elem : largest;
+    });
+    return updatedArr;
 }
 
-console.log(reverseElement([1, 2, 3]));
+console.log(updateElements([1, 20, 30, 40, 50]));
