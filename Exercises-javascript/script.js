@@ -1,11 +1,10 @@
-// 74. Write a Javascript program to find the largerst value between the first and last elements and set all the  other elements to that value. Display the updated.
+// 75. Write a Javascript program  to create an array taking the middle elements of the twow arrays of integer and each length 3.
 
-function updateElements(arr) {
-    const largest = Math.max(...arr.slice(1, arr.length - 1));
-    const updatedArr = arr.map((elem, index) => {
-        return index === 0 || index === arr.length - 1 ? elem : largest;
-    });
-    return updatedArr;
+function concatenateMiddleElement(str1, str2) {
+    const middleElem1 = str1[1];
+    const middleElem2 = str2[1];
+
+    return [middleElem1, middleElem2];
 }
 
-console.log(updateElements([1, 20, 30, 40, 50]));
+console.log(concatenateMiddleElement([1, 2, 3], [4, 5, 6]));
