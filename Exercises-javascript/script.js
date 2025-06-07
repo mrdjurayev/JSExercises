@@ -1,11 +1,7 @@
-// 76. Write a Javascript program to create an array by taking the first and last elements from a given array of integers. The length must be larger than or equal to 1.
+// 77. Write a Javascript program to test whether an array of integers of length 2 contains 1 or 3.
 
-function createNewArray(arr) {
-    if(arr.length < 1) {
-        return `The length must be larger than or equal to 1!`;
-    }
-
-    return [arr[0], arr[arr.length - 1]];
+function checkNumber(arr) {
+    return arr.includes(1) || arr.includes(3);
 }
 
-console.log(createNewArray([1, 2, 3]));
+console.log(checkNumber([1, 2]));
