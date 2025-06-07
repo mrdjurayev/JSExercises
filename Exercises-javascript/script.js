@@ -1,11 +1,11 @@
-// 80. Write a Javascrip program to swap the first and last elements of a given array of integers. The array length should be at least 1.
+// 81. Write a Javascript program to add two digits to a given  positive integer of length two.
 
-function swapElements(arr) {
-    if(arr.length < 1) return `The array length should be at least 1!`;
-    const firstChar = arr[0];
-    const lastChar = arr[arr.length - 1];
-    const betweenChar = arr.slice(1, arr.length - 1);
-    return [lastChar, ...betweenChar, firstChar];
+function add(number)  {
+    if(number >= 10 && number <= 99) {
+        return Math.floor(number / 10) + (number % 10);
+    }
+
+    return `The number length isn't 2!`;
 }
 
-console.log(swapElements([1, 2, 3, 4, 5]));
+console.log(add(99));
