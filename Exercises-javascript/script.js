@@ -1,10 +1,11 @@
-// 79. Write a Javascript program to test whether a given array of integers cotains 30 and 40 twice. The array length should be 0, 1 or 2.
+// 80. Write a Javascrip program to swap the first and last elements of a given array of integers. The array length should be at least 1.
 
-function checkNumber(arr) {
-    if(arr.length === 2) {
-        return (arr[0] === 30 && arr[1] === 30) || (arr[0] === 40 && arr[1] === 40);
-    }
-    return false;
+function swapElements(arr) {
+    if(arr.length < 1) return `The array length should be at least 1!`;
+    const firstChar = arr[0];
+    const lastChar = arr[arr.length - 1];
+    const betweenChar = arr.slice(1, arr.length - 1);
+    return [lastChar, ...betweenChar, firstChar];
 }
 
-console.log(checkNumber([30, 30]));
+console.log(swapElements([1, 2, 3, 4, 5]));
