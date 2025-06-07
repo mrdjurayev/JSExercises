@@ -1,10 +1,11 @@
-// 75. Write a Javascript program  to create an array taking the middle elements of the twow arrays of integer and each length 3.
+// 76. Write a Javascript program to create an array by taking the first and last elements from a given array of integers. The length must be larger than or equal to 1.
 
-function concatenateMiddleElement(str1, str2) {
-    const middleElem1 = str1[1];
-    const middleElem2 = str2[1];
+function createNewArray(arr) {
+    if(arr.length < 1) {
+        return `The length must be larger than or equal to 1!`;
+    }
 
-    return [middleElem1, middleElem2];
+    return [arr[0], arr[arr.length - 1]];
 }
 
-console.log(concatenateMiddleElement([1, 2, 3], [4, 5, 6]));
+console.log(createNewArray([1, 2, 3]));
