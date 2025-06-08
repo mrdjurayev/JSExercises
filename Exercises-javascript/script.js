@@ -1,30 +1,16 @@
-// 84. Write a Javascript program to replace each character in a given string with the next in the English alphabet.
-//  Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+// 85. Write a JavaScript program to divide a given array of positive integers into 
+// two parts. First element belongs to the first part, second element belongs to 
+// the second part, and third element belongs to the first part and so on. 
+// Now compute the sum of two parts and store it in an array of size two.
 
-function replaceCharacter(str) {
-    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    const alphabetUp = alphabet.map(letter => letter.toUpperCase());
-    
-    const replacedStr = str.split('').map(letter => {
-        if(letter === "z") {
-            return "a";
-        } else if(letter === 'Z') {
-            return "A";
-        }
+function splitAndSum(arr) {
+    const firstElements = arr.filter((num, index) => index % 2 === 0);
+    const secondElements = arr.filter((num, index) => index % 2 !== 0);
 
-        for(let i = 0; i < alphabet.length; i++) {
-            if(letter === alphabet[i]) {
-                return alphabet[i + 1];
-            } else if(letter === alphabetUp[i]) {
-                return alphabetUp[i + 1];
-            }
+    const sum1 = firstElements.reduce((acc, num) => acc + num, 0);
+    const sum2 = secondElements.reduce((acc, num) => acc + num, 0);
 
-        }
-
-        return letter;
-    });
-
-    return replacedStr.join('');
+    return [sum1, sum2];
 }
 
-console.log(replaceCharacter('hello javascript'));
+console.log(splitAndSum([1, 2, 3, 4, 5]));
