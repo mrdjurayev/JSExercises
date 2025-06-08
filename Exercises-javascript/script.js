@@ -1,18 +1,16 @@
-// 82. Write a Javascript program to add two positive integer witout carrying.
+// 83. Write a Javascript program to find the longest string from a given array of strings.
 
-function addWithoutCarrying(a, b) {
-    const longer = Math.max(a.toString().length, b.toString().length);
-    const strA = a.toString().padStart(longer, '0');
-    const strB = b.toString().padStart(longer, '0');
-    
-    let added = '';
-    for(let i = 0; i < longer; i++) {
-        added += ((+strA[i] + +strB[i]) % 10).toString();
+function findLongestString(arr) {
+    if(arr.length === 0) return 'Empty array!';
+
+    let longest = arr[0]; 
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].length > longest.length) {
+            longest = arr[i];
+        }
     }
 
-    return Number(added);
+    return longest;
 }
 
-console.log(addWithoutCarrying(12, 48));
-
-
+console.log(findLongestString(['hello', 'Javascript']));
