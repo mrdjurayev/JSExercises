@@ -1,10 +1,10 @@
-// 92. Write a Javascript program to find the maximum difference between any two adjacent  elements of a given array integers.
+// 93. Write a JavaScript program to find the maximum difference among all possible pairs of a given array of integers. 
 
-const numbers = [1, 20, 30, 49090, 5];
-let separateGroup = [];
-for(let i = 0; i < numbers.length - 1; i++) {
-    const diff = Math.abs(numbers[i + 1] - numbers[i]);
-    separateGroup.push(diff);
+function maxDifference(arr) {
+    const max = Math.max(...arr);
+    const min = Math.min(...arr);
+
+    return max - min;
 }
 
-console.log(Math.max(...separateGroup));
+console.log(maxDifference([1, 2, 34, 55, 90]));
