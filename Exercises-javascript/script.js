@@ -1,20 +1,9 @@
-//86. Write a Javascript program to find the types of a given angle.
+// 88. Write a JavaScript program that takes two integers and a divisor. 
+// If the given divisor divides both integers and does not divide either, 
+// two specified integers are similar. Check whether two integers are similar or not.  
 
-// Acute angle: An angle between 0 and 90 degrees.
-// Right angle: An 90 degree angle.
-// Obtuse angle: An angle between 90 and 180 degrees.
-// Straight angle: A 180 degree angle.
-
-function findNameAngle(deg) {
-    if(deg > 0 && deg < 90) {
-        return 'Acute angle';
-    } else if(deg === 90) {
-        return 'Right angle';
-    } else if(deg > 90 && deg < 180) {
-        return 'Obtuse angle';
-    } else if(deg === 180) {
-        return 'Straight angle';
-    } else return 'The degree is invalid for this example!';
+function checkSimilarity(a, b, divisor) {
+    return (a % divisor !== 0 && b % divisor !== 0) || (a % divisor === 0 && b % divisor === 0);
 }
 
-console.log(findNameAngle(180));
+console.log(checkSimilarity(16, 23, 3));
