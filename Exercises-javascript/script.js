@@ -1,12 +1,21 @@
-// 96. Write a JavaScript program to compute the sum of the absolute differences of consecutive numbers in a given array of integers. 
+// 97. Write a JavaScript program to find the shortest possible string. 
+// This can be converted into a string and converted into a palindrome by adding characters to the end of it. 
 
-function sumOfAbsoluteDifferences(arr) {
-    let sum = 0;
-    for(let i = 0; i < arr.length - 1; i++) {
-        sum += Math.abs(arr[i + 1] - arr[i]);
+function shortestPalindromeByAddingToAnd(str) {
+    function isPalindrome(s) {
+        return s === s.split('').reverse().join('');
     }
 
-    return sum;
+    for(let i = 0; i < str.length; i++) {
+        let suffix = str.slice(i);
+
+        if(isPalindrome(suffix)) {
+            const prefixToAdd = str.slice(0, i).split('').reverse().join('');
+            return str + prefixToAdd;
+        }
+    }
+
+    return str;
 }
 
-console.log(sumOfAbsoluteDifferences([1, 2, 3, 4, 5, 6, 7, 12, 23, 34]));
+console.log(shortestPalindromeByAddingToAnd('race'));
