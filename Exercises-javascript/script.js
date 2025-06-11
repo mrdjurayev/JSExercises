@@ -1,19 +1,8 @@
-// 94. Write a Javascript program to find the number appearing most frequently in a given array of integers.
+// 95. Write a Javascript program to replace all numbers with a specified number in an array of integers.
 
-function mostFrequent(arr) {
-    let count = {};
-    let maxCount = 0;
-    let result = null;
-
-    for(let num of arr) {
-        count[num] = (count[num] || 0) + 1;
-
-        if(count[num] > maxCount) {
-            maxCount = count[num];
-            result = num;
-        }
-    }
-    return result;
+function replaceGivenNumber(arr, num) {
+    const anotherArr = arr.map(() => num);
+    return anotherArr;
 }
 
-console.log(mostFrequent([1, 2, 3, 4, 3, 6]));
+console.log(replaceGivenNumber([1, 2, 3, 4], 5));
