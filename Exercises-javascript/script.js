@@ -1,21 +1,27 @@
-// 97. Write a JavaScript program to find the shortest possible string. 
-// This can be converted into a string and converted into a palindrome by adding characters to the end of it. 
+// 98. Write a Javascript program to change the case of the minimum number of letters to make a given string written in upper case or lower case.
+// For example: "Write" will be write and "PHp" will be "PHP".
 
-function shortestPalindromeByAddingToAnd(str) {
-    function isPalindrome(s) {
-        return s === s.split('').reverse().join('');
-    }
+function toUpperOrLowerCase(str) {
+    
+    let upperChars = 0;
+    let lowerChars = 0;
 
     for(let i = 0; i < str.length; i++) {
-        let suffix = str.slice(i);
+        let char = str[i];
 
-        if(isPalindrome(suffix)) {
-            const prefixToAdd = str.slice(0, i).split('').reverse().join('');
-            return str + prefixToAdd;
+        if(/[A-Z]/.test(char)) {
+            upperChars++;
+        } else if(/[a-z]/.test(char)) {
+            lowerChars++;
         }
     }
 
-    return str;
+    if(upperChars > lowerChars) {
+        return str.toUpperCase();
+    } else if(upperChars < lowerChars) {
+        return str.toLowerCase();
+    }
+    else return str;
 }
 
-console.log(shortestPalindromeByAddingToAnd('race'));
+console.log(toUpperOrLowerCase('HeLLo'));
