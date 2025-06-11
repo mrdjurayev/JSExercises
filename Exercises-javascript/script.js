@@ -1,8 +1,12 @@
-// 95. Write a Javascript program to replace all numbers with a specified number in an array of integers.
+// 96. Write a JavaScript program to compute the sum of the absolute differences of consecutive numbers in a given array of integers. 
 
-function replaceGivenNumber(arr, num) {
-    const anotherArr = arr.map(() => num);
-    return anotherArr;
+function sumOfAbsoluteDifferences(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length - 1; i++) {
+        sum += Math.abs(arr[i + 1] - arr[i]);
+    }
+
+    return sum;
 }
 
-console.log(replaceGivenNumber([1, 2, 3, 4], 5));
+console.log(sumOfAbsoluteDifferences([1, 2, 3, 4, 5, 6, 7, 12, 23, 34]));
